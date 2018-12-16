@@ -18,7 +18,7 @@ public class Coordinates {
 		System.out.println("5. Quit");
 		System.out.println();
 		String choice = input.nextLine();
-		while (!choice.equals("7")) {
+		while (!choice.equals("5")) {
 			if (choice.equals("1")) {
 				System.out.println("The distance is between " + p1 + " and " + p2 + " is "
 						+ Point.getDistance(p1x, p1y, p2x, p2y));
