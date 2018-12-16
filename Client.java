@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Coordinates {
 	public static void main(String[] args) {
+		System.out.println("Welcome to the graphing calculator");
 		Point p1 = new Point();
 		Point p2 = new Point();
 		Scanner input = new Scanner(System.in);
