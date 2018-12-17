@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Coordinates {
 	public static void main(String[] args) {
-		System.out.println("Welcome to the graphing calculator");
 		Point p1 = new Point();
 		Point p2 = new Point();
 		Scanner input = new Scanner(System.in);
@@ -11,14 +10,15 @@ public class Coordinates {
 		double p1x = p1.getX(), p1y = p1.getY();
 		double p2x = p2.getX(), p2y = p2.getY();
 		System.out.println("What Calculation do you want to do? (Enter the number) ");
-		System.out.println("1. Distance"); // look here for options
+		System.out.println("1. Distance"); // look here for options!!
 		System.out.println("2. Midpoint");
 		System.out.println("3. Quadrant");
 		System.out.println("4. Slope");
-		System.out.println("5. Quit");
+		System.out.println("5. Polar Coordinates");
+		System.out.println("6. Quit");
 		System.out.println();
 		String choice = input.nextLine();
-		while (!choice.equals("5")) {
+		while (!choice.equals("6")) {
 			if (choice.equals("1")) {
 				System.out.println("The distance is between " + p1 + " and " + p2 + " is "
 						+ Point.getDistance(p1x, p1y, p2x, p2y));
@@ -32,10 +32,14 @@ public class Coordinates {
 				System.out.println(
 						"The slope between " + p1 + " and " + p2 + " is " + Point.getSlope(p1x, p1y, p2x, p2y));
 			} else if (choice.equals("5")) {
+				System.out.println("The polar coordinate of " + p1 + " is " + Point.getPolar(p1x, p1y));
+				System.out.println("The polar coordinate of " + p2 + " is " + Point.getPolar(p2x, p2y));
+			} else if (choice.equals("6")) {
 				break;
 			}
 			System.out.println();
 			System.out.println("What Calculation do you want to do?");
+			System.out.println();
 			choice = input.nextLine();
 		}
 		System.out.println("Quitting");
