@@ -52,23 +52,33 @@ public class Point {
 		double yfinal = (p1y + p2y) / 2;
 		return String.format("(%.2f,%.2f)", xfinal, yfinal);
 	}
-	
+
 	public static String getSlope(double p1x, double p1y, double p2x, double p2y) {
 		double yfinal = p2y - p1y;
 		double xfinal = p2x - p1x;
 		return String.format("(%.2f,%.2f)", yfinal, xfinal);
 	}
+
+	public static String getPolar(double x, double y) {
+		double radius = (Math.sqrt((Math.pow(x, 2) + Math.pow(y, 2))));
+		double theta = Math.atan2(y, x);
+		return String.format("(%.2f,%.2f)", radius, theta);
+	}
+
 	public static String getQuadrant(double px, double py) {
 		if (px > 0 && py > 0) {
 			return ("Quadrant I");
-		}
-		else if (px < 0 && py > 0) {
+		} else if (px == 0 && py == 0) {
+			return ("On Origin");
+		} else if (px == 0) {
+			return ("On Y-Axis");
+		} else if (py == 0) {
+			return ("On X-Axis");
+		} else if (px < 0 && py > 0) {
 			return ("Quadrant II");
-		}
-		else if (px < 0 && py < 0) {
+		} else if (px < 0 && py < 0) {
 			return ("Quadrant III");
-		}
-		else if (px > 0 && py < 0) {
+		} else if (px > 0 && py < 0) {
 			return ("Quadrant IV");
 		}
 		return ("This shouldn't have happened. How did you get this error?");
