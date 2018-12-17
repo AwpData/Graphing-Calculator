@@ -1,2 +1,2 @@
 # Graphing-Calculator-
-Does calculations like distance, midpoint, quadrants, slope, and polar coordinates.
+Does calculations like distance, midpoint, quadrants, slope and polar coordinates.
